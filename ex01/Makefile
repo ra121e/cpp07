@@ -6,7 +6,7 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 21:00:05 by athonda           #+#    #+#              #
-#    Updated: 2025/06/20 21:10:35 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/20 22:39:04 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,9 @@ SRC		=	$(SRC_F:%.cpp=$(SRC_DIR)/%.cpp)
 OBJ_DIR	=	obj
 OBJ		=	$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC_F))
 
+DEP_EX	=	Iter.hpp
 INC_DIR	=	.
-DEP		=	$(wildcard $(patsubst %.cpp,$(INC_DIR)/%.hpp,$(SRC_F)))
+DEP		=	$(wildcard $(patsubst %.cpp,$(INC_DIR)/%.hpp,$(SRC_F))) $(INC_DIR)/$(DEP_EX)
 
 CC		=	c++
 CFLAGS	=	-g -Wall -Werror -Wextra -std=c++98
