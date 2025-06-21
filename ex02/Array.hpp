@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:22:04 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 23:49:12 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/21 23:54:43 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ class Array
 
 		T	&operator[](unsigned int index);
 		T const	&operator[](unsigned int index) const;
-//		const T	&operator[](unsigned int index) const;
-
+		unsigned int size() const;
 	private:
 		T				*_data;
 		unsigned int	_size;
