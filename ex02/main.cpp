@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 22:51:02 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 22:11:09 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/21 23:01:28 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,7 @@
 
 int	main(void)
 {
+	Array<int> a;
+
 	return (0);
 }

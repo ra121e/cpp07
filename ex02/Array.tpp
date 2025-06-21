@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:55:50 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 22:13:40 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/21 22:59:30 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ Array<T>	&Array<T>::operator=(Array const &other)
 {
 	if (this != &other)
 	{
-		delete[] _data;
+		delete[] (this->_data);
 
-		_size = other.size;
-		if (_size > 0)
+		this->_size = other.size;
+		if (this->_size > 0)
 		{
-			_data = new T[_size];
-			for (unsigned int i = 0; i < _size; ++i)
+			this->_data = new T[this->_size];
+			for (unsigned int i = 0; i < this->_size; ++i)
 			{
-				_data[i] = other._data[i];
+				this->_data[i] = other._data[i];
 			}
 		}
 		else
-			_data = NULL;
+			this->_data = NULL;
 	}
 	return (*this);
 }
@@ -55,5 +55,5 @@ Array<T>	&Array<T>::operator=(Array const &other)
 template <typename T>
 Array<T>::~Array()
 {
-	delete[] _data;
+	delete[] (this->_data);
 }
