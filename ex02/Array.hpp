@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/20 22:51:02 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 22:11:09 by athonda          ###   ########.fr       */
+/*   Created: 2025/06/21 15:22:04 by athonda           #+#    #+#             */
+/*   Updated: 2025/06/21 22:12:27 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Array.hpp"
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 
-int	main(void)
+template <typename T>
+class Array
 {
-	return (0);
-}
+	public:
+		Array();
+		Array(unsigned int n);
+		Array(Array const &other);
+		Array	&operator=(Array const &other);
+		~Array();
+
+//		T	&operator[](unsigned int index);
+//		const T	&operator[](unsigned int index) const;
+
+	private:
+		T				*_data;
+		unsigned int	_size;
+};
+
+
+#endif
+
+#include "Array.tpp"

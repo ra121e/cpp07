@@ -6,7 +6,7 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 22:41:09 by athonda           #+#    #+#              #
-#    Updated: 2025/06/20 22:50:50 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/21 22:10:12 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC		=	$(SRC_F:%.cpp=$(SRC_DIR)/%.cpp)
 OBJ_DIR	=	obj
 OBJ		=	$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC_F))
 
-DEP_EX	=
+DEP_EX	=	Array.hpp Array.tpp
 INC_DIR	=	.
 DEP		=	$(wildcard $(patsubst %.cpp,%(INC_DIR)/%.hpp,$(SRC_F))) $(DEP_EX)
 
