@@ -6,12 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:22:04 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 22:12:27 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/21 23:49:12 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
+
+# include <stdexcept>
 
 template <typename T>
 class Array
@@ -23,7 +25,8 @@ class Array
 		Array	&operator=(Array const &other);
 		~Array();
 
-//		T	&operator[](unsigned int index);
+		T	&operator[](unsigned int index);
+		T const	&operator[](unsigned int index) const;
 //		const T	&operator[](unsigned int index) const;
 
 	private:
@@ -31,7 +34,5 @@ class Array
 		unsigned int	_size;
 };
 
-
-#endif
-
 #include "Array.tpp"
+#endif

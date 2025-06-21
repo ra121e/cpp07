@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:55:50 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 22:59:30 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/21 23:47:00 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,20 @@ template <typename T>
 Array<T>::~Array()
 {
 	delete[] (this->_data);
+}
+
+template <typename T>
+T	&Array<T>::operator[](unsigned int index)
+{
+	if (index >= this->_size)
+		throw std::out_of_range("index is out of range");
+	return (this->_data[index]);
+}
+
+template <typename T>
+T const	&Array<T>::operator[](unsigned int index) const
+{
+	if (index >= this->_size)
+		throw std::out_of_range("index is out of range");
+	return (this->_data[index]);
 }
