@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:10:45 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/22 11:08:14 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/24 16:34:13 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ int	main(void)
 	Banner("case: std::string with display func()");
 	std::string str[] = {"I", "am", "a", "42Singapore", "student"};
 	int	length = sizeof(str) / sizeof(str[0]);
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << str[i] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "after applying elements on the function: " << std::endl;
+
 	iter(str, length, display);
 	}
 	{
@@ -44,6 +51,24 @@ int	main(void)
 	Banner("case: int with add()");
 	int str[] = {42, 24, 57, 111, 0};
 	int	length = sizeof(str) / sizeof(str[0]);
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << str[i] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "after applying elements on the function: " << std::endl;
+	iter(str, length, add);
+	}
+	{
+	Banner("case: double with add()");
+	double str[] = {42.0, 24.3, 10e+57, -2e+3, 0};
+	int	length = sizeof(str) / sizeof(str[0]);
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << str[i] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "after applying elements on the function: " << std::endl;
 	iter(str, length, add);
 	}
 	return (0);
