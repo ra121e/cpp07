@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 15:22:04 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/21 23:54:43 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/22 08:28:41 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ class Array
 		unsigned int	_size;
 };
 
-#include "Array.tpp"
 #endif
+#include "Array.tpp"
