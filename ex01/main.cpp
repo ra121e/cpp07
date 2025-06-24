@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:10:45 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/24 16:34:13 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/24 18:06:39 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,20 @@ int	main(void)
 	iter(str, length, display);
 	}
 	{
+	Banner("case: int with display func()");
+	int str[] = {42, 24, 57, 111, 0};
+	int	length = sizeof(str) / sizeof(str[0]);
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << str[i] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "after applying elements on the function: " << std::endl;
+
+	iter(str, length, display);
+	}
+	{
+	// test for compile error T is std::string
 //	Banner("case: std::string with add()");
 //	std::string str[] = {"I", "am", "a", "42Singapore", "student"};
 //	int	length = sizeof(str) / sizeof(str[0]);
