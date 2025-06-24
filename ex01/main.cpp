@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:10:45 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/24 18:06:39 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/24 19:57:02 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "after applying elements on the function: " << std::endl;
 
-	iter(str, length, display);
+	iter(str, length, display<std::string>);
 	}
 	{
 	Banner("case: int with display func()");
@@ -45,7 +45,7 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "after applying elements on the function: " << std::endl;
 
-	iter(str, length, display);
+	iter(str, length, display<int>);
 	}
 	{
 	// test for compile error T is std::string
@@ -71,7 +71,7 @@ int	main(void)
 	}
 	std::cout << std::endl;
 	std::cout << "after applying elements on the function: " << std::endl;
-	iter(str, length, add);
+	iter(str, length, add<int>);
 	}
 	{
 	Banner("case: double with add()");
@@ -83,7 +83,7 @@ int	main(void)
 	}
 	std::cout << std::endl;
 	std::cout << "after applying elements on the function: " << std::endl;
-	iter(str, length, add);
+	iter(str, length, add<double>);
 	}
 	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 22:13:56 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/22 11:08:34 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/24 19:57:34 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 
-template<typename T>
-void	iter(T *array, int length, void(*f)(T const &s))
+template<typename T, typename U>
+void	iter(T *array, int length, U f)
 {
 	if (array == NULL || f == NULL)
 		return ;
