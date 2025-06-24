@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 22:51:02 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/24 18:26:29 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/24 20:48:58 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ int main(int, char**)
 	//SCOPE
 	{
 		Array<int> tmp = numbers;
-		std::cout << "Array<int> tmp: " << tmp << std::endl;
 		Array<int> test(tmp);
 	}
 	for (int i = 0; i < MAX_VAL; i++)
