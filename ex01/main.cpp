@@ -6,13 +6,35 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:10:45 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/24 19:57:02 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/25 09:33:01 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include "Iter.hpp"
+
+class Awesome
+{
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
+}
+
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
 
 void	Banner(std::string title)
 {
@@ -85,5 +107,11 @@ int	main(void)
 	std::cout << "after applying elements on the function: " << std::endl;
 	iter(str, length, add<double>);
 	}
+	Banner("case: Eval");
+	int tab[] = { 0, 1, 2, 3, 4 };
+	Awesome tab2[5];
+
+	iter( tab, 5, print<const int> );
+	iter( tab2, 5, print<Awesome> );
 	return (0);
 }
